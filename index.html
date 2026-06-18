@@ -9,8 +9,8 @@
     <!-- React & ReactDOM -->
     <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
-    <!-- Babel for in-browser JSX compilation -->
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <!-- Babel standalone (Pinned version for stability) -->
+    <script src="https://unpkg.com/@babel/standalone@7.23.6/babel.min.js"></script>
 
     <style>
         /* Custom Scrollbar for navigation */
@@ -36,7 +36,8 @@
 <body class="bg-slate-950 m-0 p-0 overflow-x-hidden font-sans">
     <div id="root"></div>
 
-    <script type="text/babel">
+    <!-- Specify data-presets="react" to prevent import errors in strict environments -->
+    <script type="text/babel" data-presets="react">
         const { useState, useEffect } = React;
 
         // --- ICON COMPONENTS ---
